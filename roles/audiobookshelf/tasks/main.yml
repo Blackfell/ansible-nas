@@ -16,10 +16,10 @@
         image: ghcr.io/advplyr/audiobookshelf:latest
         pull: true
         volumes:
-          - "{{ audiobookshelf_data_directory }}/data:/audiobookshelf/metadata:rw"
-          - "{{ audiobookshelf_data_directory }}/playlists:/audiobookshelf/config:rw"
-          - "{{ audiobookshelf_audiobooks_directory }}:/audiobookshelf/audiobooks:rw"
-          - "{{ audiobookshelf_podcasts_directory }}:/audiobookshelf/podcasts:rw"
+          - "{{ audiobookshelf_data_directory }}/metadata:/metadata:rw"
+          - "{{ audiobookshelf_data_directory }}/config:/config:rw"
+          - "{{ audiobookshelf_audiobooks_directory }}:/audiobooks:rw"
+          - "{{ audiobookshelf_podcasts_directory }}:/podcasts:rw"
         ports:
           - "{{ audiobookshelf_port }}:80"
         env:
